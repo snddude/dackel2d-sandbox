@@ -14,6 +14,10 @@ static void process_event(event_t *event)
         {
             case KeyCode_0:
                 dynamic_log_level = (dynamic_log_level + 1) % NumberOfLogLevels;
+
+                if (dynamic_log_level == LogLevel_None)
+                    log_error("Log level set to LogLevel_None (0)");
+
                 set_log_level(dynamic_log_level);
                 log_error("Incremented log level to: %d", dynamic_log_level);
                 break;
