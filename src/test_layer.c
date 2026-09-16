@@ -2,6 +2,11 @@
 
 static log_level_t dynamic_log_level = LogLevel_Error;
 
+static void on_attach()
+{
+    log_error("Initial log level is set to LogLevel_Error (1) by application");
+}
+
 static void process_event(event_t *event)
 {
     if (event->type == EventType_Key && event->key.pressed && !event->key.echo)
@@ -36,5 +41,6 @@ static void process_event(event_t *event)
 void test_layer_init(layer_t *self)
 {
     layer_init(self);
+    self->on_attach_pfn = &on_attach;
     self->process_event_pfn = &process_event;
 }
