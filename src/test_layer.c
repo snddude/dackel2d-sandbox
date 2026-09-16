@@ -22,7 +22,7 @@ static void process_event(event_t *event)
                 }
 
                 set_log_level(dynamic_log_level);
-                log_warning("Incremented log level to: %d", dynamic_log_level);
+                log_error("Incremented log level to: %d", dynamic_log_level);
                 break;
             case KeyCode_1:
                 log_info("This is an informational message!");    
