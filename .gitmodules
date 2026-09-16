@@ -1,0 +1,4 @@
+[submodule "vendor/c-libdackel2d"]
+	path = vendor/c-libdackel2d
+	url = https://github.com/snddude/c-libdackel2d
+	ignore = dirty
