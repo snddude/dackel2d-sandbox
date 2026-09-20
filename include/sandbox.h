@@ -2,4 +2,4 @@
 
 #include <dackel2d.h>
 
-bool sandbox_init(application_t *self);
+bool sandbox_init(application_t *self, int argc, char *argv[]);
